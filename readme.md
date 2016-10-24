@@ -10,9 +10,10 @@ To create a new project that fails the test:
  - Delete `AnyCPU`
  - Under "Platform" for DummyProgram choose `<Edit...>`
  - Delete `AnyCPU`
- Be sure to delete the project level AnyCPU entries along with the solution level entries or the tests will not show the problem.
  
-Workaround to fix the issue
+Be sure to delete the project level AnyCPU entries along with the solution level entries or the tests will not show the problem.
+ 
+Workaround to fix the issue:
  - Edit \WorkingProgram\DummyProgram.csproj with notepad
  - Change `<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>` to `<Platform Condition=" '$(Platform)' == '' ">x86</Platform>`
  
